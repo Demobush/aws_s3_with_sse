@@ -6,9 +6,9 @@ on:
 jobs:
   build2_s3:
     env:
-      AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
-      AWS_SECRET_ACCESS_KEY: ${{secrets.SECRET_KEY_ID}}
-    runs-on: windows-latest
+      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS.SECRET_ACCESS_KEY}}
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v1
