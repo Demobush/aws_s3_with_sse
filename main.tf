@@ -5,17 +5,17 @@ resource "aws_s3_bucket" "versioning_bucket" {
   versioning {
     enabled = true
   }
-
+}
 
 
   resource "aws_kms_key" "mykey" {
-  description             = "This key is used to encrypt bucket objects"
+  description = "This key is used to encrypt bucket objects"
   deletion_window_in_days = 10
   tags = {
     Name: var.tag
   }
 }
-}
+
 
 resource "aws_s3_bucket" "mybucket" {
   bucket = var.mybucket #bootcamp30-9-bush
